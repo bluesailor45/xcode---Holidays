@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextViewController: UIViewController, UITextFieldDelegate {
+class TextViewController: UIViewController, UITextViewDelegate {
 
 
     @IBOutlet var locLabel: UILabel!
@@ -26,8 +26,20 @@ class TextViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // func textView implemented to force keyboard to dismiss if return hit
+    // also "commentField.delegate ... " included
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        commentField.delegate = self
         
     }
 

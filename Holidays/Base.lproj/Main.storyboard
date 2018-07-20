@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="add comments to this location ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q5J-BH-iER">
-                                <rect key="frame" x="16" y="137" width="343" height="510"/>
+                                <rect key="frame" x="16" y="101" width="343" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -154,7 +154,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI4-dV-gBJ">
-                                <rect key="frame" x="146" y="99" width="82" height="30"/>
+                                <rect key="frame" x="146" y="619" width="82" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="3s6-MM-WTu"/>
                                     <constraint firstAttribute="height" constant="30" id="ezP-g3-Cxc"/>
@@ -171,12 +171,13 @@
                             <constraint firstItem="SI4-dV-gBJ" firstAttribute="centerX" secondItem="HaV-eC-fuR" secondAttribute="centerX" id="3i4-SM-GRm"/>
                             <constraint firstItem="vnX-2Q-SXg" firstAttribute="trailing" secondItem="JuK-sD-C1V" secondAttribute="trailing" constant="16" id="5lS-FV-Bzw"/>
                             <constraint firstItem="JuK-sD-C1V" firstAttribute="leading" secondItem="vnX-2Q-SXg" secondAttribute="leading" constant="16" id="Agh-h0-RDs"/>
-                            <constraint firstItem="q5J-BH-iER" firstAttribute="leading" secondItem="vnX-2Q-SXg" secondAttribute="leading" constant="16" id="PCC-xe-TLq"/>
-                            <constraint firstItem="q5J-BH-iER" firstAttribute="top" secondItem="SI4-dV-gBJ" secondAttribute="bottom" constant="8" id="SQr-Tj-R2i"/>
-                            <constraint firstItem="SI4-dV-gBJ" firstAttribute="top" secondItem="JuK-sD-C1V" secondAttribute="bottom" constant="6" id="cms-zr-tWQ"/>
+                            <constraint firstItem="vnX-2Q-SXg" firstAttribute="bottom" secondItem="SI4-dV-gBJ" secondAttribute="bottom" constant="20" id="GiN-D6-Mk1"/>
+                            <constraint firstItem="q5J-BH-iER" firstAttribute="top" secondItem="JuK-sD-C1V" secondAttribute="bottom" constant="8" id="GpF-Hz-aZI"/>
+                            <constraint firstItem="q5J-BH-iER" firstAttribute="leading" secondItem="vnX-2Q-SXg" secondAttribute="leading" constant="16" id="H0R-X5-oo0"/>
                             <constraint firstItem="JuK-sD-C1V" firstAttribute="top" secondItem="vnX-2Q-SXg" secondAttribute="top" constant="8" id="iC2-ne-BUb"/>
+                            <constraint firstItem="vnX-2Q-SXg" firstAttribute="bottom" secondItem="SI4-dV-gBJ" secondAttribute="bottom" constant="18" id="jCR-Yx-Oy5"/>
                             <constraint firstItem="vnX-2Q-SXg" firstAttribute="trailing" secondItem="q5J-BH-iER" secondAttribute="trailing" constant="16" id="rrJ-v8-JT6"/>
-                            <constraint firstItem="vnX-2Q-SXg" firstAttribute="bottom" secondItem="q5J-BH-iER" secondAttribute="bottom" constant="20" id="tGb-g3-Bay"/>
+                            <constraint firstItem="SI4-dV-gBJ" firstAttribute="top" secondItem="q5J-BH-iER" secondAttribute="bottom" constant="8" id="yjd-q2-9jt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vnX-2Q-SXg"/>
                     </view>

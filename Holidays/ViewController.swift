@@ -41,6 +41,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
         guard gestureRecognizer.view != nil else {return}
         
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
+            locationManager.stopUpdatingLocation()          // V1.1 avoid curious behaviour while scaling
             gestureRecognizer.view?.transform = (gestureRecognizer.view?.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale))!
             gestureRecognizer.scale = 1.0
         }

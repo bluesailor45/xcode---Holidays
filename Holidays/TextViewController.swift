@@ -16,13 +16,12 @@ class TextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var commentField: UITextView!
     
     @IBAction func saveText(_ sender: Any) {
-    //    navigationController?.popViewController(animated: true)
+   
         if activePlace != -1 {
             places[activePlace]["comment"] = commentField.text
             
             UserDefaults.standard.set(places, forKey: "places")
-    //    performSegue(withIdentifier: "backToTable", sender: nil)    // PROBLEM !!!
-        }
+            performSegue(withIdentifier: "unwindToTable", sender: nil)        }
     }
     
     

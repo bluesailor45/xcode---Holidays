@@ -14,8 +14,16 @@ var activePlace = -1
 
 class TableViewController: UITableViewController {
 
+
     @IBOutlet var table: UITableView!
     
+    
+    
+    
+    @IBAction func unwindToTable(segue: UIStoryboardSegue) {
+        // refer to this segue in next views
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +36,8 @@ class TableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+    
+        super.viewDidAppear(true)
         navigationItem.title = "Locations"
         activePlace = -1
         
@@ -42,7 +51,11 @@ class TableViewController: UITableViewController {
             
             UserDefaults.standard.set(places, forKey: "places")
         }
-        table.reloadData()    }
+   //     print(UserDefaults.standard.array(forKey: "places") as Any)
+        
+        table.reloadData()
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,7 +89,7 @@ class TableViewController: UITableViewController {
     
       override  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         activePlace = indexPath.row
-        performSegue(withIdentifier: "toMap", sender: nil)
+        performSegue(withIdentifier: "toMap", sender: self)
     }
 
     

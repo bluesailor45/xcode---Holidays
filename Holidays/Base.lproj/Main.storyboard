@@ -13,24 +13,25 @@
         <!--Locations-->
         <scene sceneID="bPh-dg-SBM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeK-Ic-9YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="x80-7e-Bha" customClass="TableViewController" customModule="Holidays" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FkY-VR-QDY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y2v-u7-H2M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="WDh-Gf-eEV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="PVp-Jb-AK5">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WDh-Gf-eEV" id="bte-le-4Zt">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PVp-Jb-AK5" id="qtl-j1-mdc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="x80-7e-Bha" id="cHK-NX-op5"/>
-                            <outlet property="delegate" destination="x80-7e-Bha" id="L7E-E6-fhp"/>
+                            <outlet property="dataSource" destination="x80-7e-Bha" id="GIq-a6-A1l"/>
+                            <outlet property="delegate" destination="x80-7e-Bha" id="yfN-X4-Jzu"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locations" id="4yq-Se-Ksj">
@@ -39,16 +40,12 @@
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="toMap" id="83c-8x-fUk"/>
                             </connections>
                         </barButtonItem>
-                        <connections>
-                            <outlet property="titleView" destination="FkY-VR-QDY" id="btX-uo-pzM"/>
-                        </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="table" destination="FkY-VR-QDY" id="Jn1-PC-9bB"/>
+                        <outlet property="table" destination="Y2v-u7-H2M" id="S7M-8O-4Vg"/>
                         <segue destination="Y3i-EY-t54" kind="show" identifier="toComment" id="Re8-wx-MqA"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeK-Ic-9YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="114"/>
         </scene>
@@ -79,6 +76,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-wm-m1i">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <gestureRecognizers/>
+                                <viewLayoutGuide key="safeArea" id="ls2-Fc-KNU"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="yz9-Rm-Cv2" appends="YES" id="Upk-lO-C0Y"/>
                                 </connections>
@@ -119,9 +117,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="KbU-wm-m1i" id="EN5-Si-Efo"/>
+                        <segue destination="f33-mY-4aD" kind="unwind" identifier="unwindToTable" unwindAction="unwindToTableWithSegue:" id="oRI-xH-p11"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="f33-mY-4aD" userLabel="Exit" sceneMemberID="exit"/>
                 <pinchGestureRecognizer id="yz9-Rm-Cv2">
                     <connections>
                         <action selector="scaleMap:" destination="BYZ-38-t0r" id="PM6-MR-4uz"/>
@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="add comments to this location ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q5J-BH-iER">
-                                <rect key="frame" x="16" y="101" width="343" height="510"/>
+                                <rect key="frame" x="16" y="101" width="343" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -154,7 +154,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI4-dV-gBJ">
-                                <rect key="frame" x="146" y="619" width="82" height="30"/>
+                                <rect key="frame" x="146" y="617" width="82" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="3s6-MM-WTu"/>
                                     <constraint firstAttribute="height" constant="30" id="ezP-g3-Cxc"/>
@@ -175,7 +175,6 @@
                             <constraint firstItem="q5J-BH-iER" firstAttribute="top" secondItem="JuK-sD-C1V" secondAttribute="bottom" constant="8" id="GpF-Hz-aZI"/>
                             <constraint firstItem="q5J-BH-iER" firstAttribute="leading" secondItem="vnX-2Q-SXg" secondAttribute="leading" constant="16" id="H0R-X5-oo0"/>
                             <constraint firstItem="JuK-sD-C1V" firstAttribute="top" secondItem="vnX-2Q-SXg" secondAttribute="top" constant="8" id="iC2-ne-BUb"/>
-                            <constraint firstItem="vnX-2Q-SXg" firstAttribute="bottom" secondItem="SI4-dV-gBJ" secondAttribute="bottom" constant="18" id="jCR-Yx-Oy5"/>
                             <constraint firstItem="vnX-2Q-SXg" firstAttribute="trailing" secondItem="q5J-BH-iER" secondAttribute="trailing" constant="16" id="rrJ-v8-JT6"/>
                             <constraint firstItem="SI4-dV-gBJ" firstAttribute="top" secondItem="q5J-BH-iER" secondAttribute="bottom" constant="8" id="yjd-q2-9jt"/>
                         </constraints>
@@ -184,9 +183,11 @@
                     <connections>
                         <outlet property="commentField" destination="q5J-BH-iER" id="PQt-Tk-rLC"/>
                         <outlet property="locLabel" destination="JuK-sD-C1V" id="DvE-42-PAi"/>
+                        <segue destination="KVq-Ba-PxZ" kind="unwind" identifier="unwindToTable" unwindAction="unwindToTableWithSegue:" id="wer-V6-e7b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFu-bc-Nfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KVq-Ba-PxZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2120.8000000000002" y="113.79310344827587"/>
         </scene>

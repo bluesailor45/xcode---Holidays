@@ -253,6 +253,8 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
   //          print(self.pointAnnotation.title! + " , " + String(lat) + " " + String(lon))
             
              UserDefaults.standard.set(places, forKey: "places")    // save permanently
+            // go back to Table View via segue defined in TableView
+            performSegue(withIdentifier: "unwindToTable", sender: nil)
             
         }
     }

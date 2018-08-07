@@ -94,6 +94,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        locationManager.stopUpdatingLocation()  // avoid back to current loc after search
         //1
         searchBar.resignFirstResponder()
         dismiss(animated: true, completion: nil)
@@ -249,8 +250,6 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
             let lat = self.pointAnnotation.coordinate.latitude
             let lon = self.pointAnnotation.coordinate.longitude
             places.append(["name": name!, "lat": String(lat), "lon": String(lon)])
-        
-  //          print(self.pointAnnotation.title! + " , " + String(lat) + " " + String(lon))
             
              UserDefaults.standard.set(places, forKey: "places")    // save permanently
             // go back to Table View via segue defined in TableView

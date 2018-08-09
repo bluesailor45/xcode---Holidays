@@ -14,16 +14,50 @@ var activePlace = -1
 
 class TableViewController: UITableViewController {
 
+    @IBAction func saveFile(_ sender: Any) {
 
+        let url = getFileName()
+        let fileName = url.appendingPathComponent("holiday.txt")
+       
+            NSKeyedArchiver.archiveRootObject(places, toFile: fileName.path)
+            print("places archived")
+        print(places)
+        print(fileName)
+        
+    }
+    
+    @IBAction func loadFile(_ sender: Any) {
+        let url = getFileName()
+        let fileName = url.appendingPathComponent("holiday.txt")
+      
+        if let filePlaces = (NSKeyedUnarchiver.unarchiveObject(withFile: fileName.path ) as? [Dictionary<String, String>]) {
+            places = filePlaces
+            print("places unarchived")
+        }
+        table.reloadData()
+    
+        print(places)
+        print(fileName)
+    }
+    
+    func getFileName() -> URL {
+        let fm = FileManager.default
+        let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
+        let url = urls.first
+        return url!
+       
+        }
+    
     @IBOutlet var table: UITableView!
     
-    
+
     
     
     @IBAction func unwindToTable(segue: UIStoryboardSegue) {
         // refer to this segue in next views
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

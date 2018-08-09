@@ -13,12 +13,28 @@
         <!--Locations-->
         <scene sceneID="bPh-dg-SBM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeK-Ic-9YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="x80-7e-Bha" customClass="TableViewController" customModule="Holidays" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y2v-u7-H2M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Qvq-O0-bJ1">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Save file" id="JbI-86-8pg">
+                                    <connections>
+                                        <action selector="saveFile:" destination="x80-7e-Bha" id="ZPM-tG-bks"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="vYM-dl-XRu"/>
+                                <barButtonItem title="Load file" id="0ey-2W-xQ9">
+                                    <connections>
+                                        <action selector="loadFile:" destination="x80-7e-Bha" id="p9F-c3-cg8"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="PVp-Jb-AK5">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -46,6 +62,7 @@
                         <segue destination="Y3i-EY-t54" kind="show" identifier="toComment" id="Re8-wx-MqA"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeK-Ic-9YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="114"/>
         </scene>

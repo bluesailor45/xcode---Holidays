@@ -12,8 +12,12 @@ var places = [Dictionary<String, String>()]
 // var places = [["name": "La Brigantine", "lat": "43.268", "lon": "6.58", "comment": "my favorite"]]
 var activePlace = -1
 
+var fileNames: [URL] = []               // used for saving different "projects"
+
 class TableViewController: UITableViewController {
 
+
+    /*
     @IBAction func saveFile(_ sender: Any) {
 
         let url = getFileName()
@@ -25,28 +29,16 @@ class TableViewController: UITableViewController {
         print(fileName)
         
     }
-    
-    @IBAction func loadFile(_ sender: Any) {
-        let url = getFileName()
-        let fileName = url.appendingPathComponent("holiday.txt")
-      
-        if let filePlaces = (NSKeyedUnarchiver.unarchiveObject(withFile: fileName.path ) as? [Dictionary<String, String>]) {
-            places = filePlaces
-            print("places unarchived")
-        }
-        table.reloadData()
-    
-        print(places)
-        print(fileName)
-    }
+ 
     
     func getFileName() -> URL {
         let fm = FileManager.default
         let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
         let url = urls.first
         return url!
-       
-        }
+        
+    }
+    */
     
     @IBOutlet var table: UITableView!
     
@@ -55,8 +47,7 @@ class TableViewController: UITableViewController {
     
     @IBAction func unwindToTable(segue: UIStoryboardSegue) {
         // refer to this segue in next views
-        
-    }
+   }
     
     
     override func viewDidLoad() {
@@ -87,6 +78,7 @@ class TableViewController: UITableViewController {
         }
    //     print(UserDefaults.standard.array(forKey: "places") as Any)
         
+        print("places in TableViewController = ", places)
         table.reloadData()
         
     }

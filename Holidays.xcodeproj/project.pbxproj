@@ -18,6 +18,8 @@
 		5CEC557720A9CEE300C37476 /* HolidaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEC557620A9CEE300C37476 /* HolidaysTests.swift */; };
 		5CEC558220A9CEE300C37476 /* HolidaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEC558120A9CEE300C37476 /* HolidaysUITests.swift */; };
 		5CEC559120A9CF5200C37476 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEC559020A9CF5200C37476 /* CoreLocation.framework */; };
+		5CF2FD7C21371FC000E9ADCC /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2FD7B21371FC000E9ADCC /* PopUpTableViewController.swift */; };
+		5CF2FD7E21372A5B00E9ADCC /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2FD7D21372A5B00E9ADCC /* PopUpViewController.swift */; };
 		5CF9BAC020D1104D005A8C25 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9BABF20D1104D005A8C25 /* TextViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		5CEC558120A9CEE300C37476 /* HolidaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysUITests.swift; sourceTree = "<group>"; };
 		5CEC558320A9CEE300C37476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CEC559020A9CF5200C37476 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5CF2FD7B21371FC000E9ADCC /* PopUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
+		5CF2FD7D21372A5B00E9ADCC /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		5CF9BABF20D1104D005A8C25 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,8 @@
 				5CF9BABF20D1104D005A8C25 /* TextViewController.swift */,
 				5CEC556020A9CEE200C37476 /* ViewController.swift */,
 				5CEC556220A9CEE200C37476 /* Main.storyboard */,
+				5CF2FD7D21372A5B00E9ADCC /* PopUpViewController.swift */,
+				5CF2FD7B21371FC000E9ADCC /* PopUpTableViewController.swift */,
 				5C38AA2820A9E980003A6BFA /* TableViewController.swift */,
 				5CEC556820A9CEE300C37476 /* Assets.xcassets */,
 				5CEC556A20A9CEE300C37476 /* LaunchScreen.storyboard */,
@@ -283,8 +289,10 @@
 			files = (
 				5CF9BAC020D1104D005A8C25 /* TextViewController.swift in Sources */,
 				5CEC556120A9CEE200C37476 /* ViewController.swift in Sources */,
+				5CF2FD7E21372A5B00E9ADCC /* PopUpViewController.swift in Sources */,
 				5CEC556720A9CEE200C37476 /* Holidays.xcdatamodeld in Sources */,
 				5CEC555F20A9CEE200C37476 /* AppDelegate.swift in Sources */,
+				5CF2FD7C21371FC000E9ADCC /* PopUpTableViewController.swift in Sources */,
 				5C38AA2920A9E980003A6BFA /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

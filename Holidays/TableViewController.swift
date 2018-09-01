@@ -47,7 +47,32 @@ class TableViewController: UITableViewController {
     
     @IBAction func unwindToTable(segue: UIStoryboardSegue) {
         // refer to this segue in next views
-   }
+        // code appended to support data passing
+        
+  //      print("segue source = ", segue.source)
+        
+        if segue.source is PopUpTableViewController {
+     
+            if let senderVC = segue.source as? PopUpTableViewController {
+                let projectFile = senderVC.passedFileName
+        //        print("project File = ", projectFile)
+                if let filePlaces = (NSKeyedUnarchiver.unarchiveObject(withFile: projectFile)) as? [Dictionary<String,String>] {
+                    
+   //                 print("unarchived object = ", filePlaces)
+                    
+                    places.removeAll()
+                    
+                    for i in filePlaces.indices {
+                        places.append(filePlaces[i])
+                        
+    //                    print("places: = ", places)
+                    }
+                }
+            }
+            UserDefaults.standard.set(places, forKey: "places")     // save new values
+            table.reloadData()
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -78,7 +103,7 @@ class TableViewController: UITableViewController {
         }
    //     print(UserDefaults.standard.array(forKey: "places") as Any)
         
-        print("places in TableViewController = ", places)
+    //    print("places in TableViewController = ", places)
         table.reloadData()
         
     }

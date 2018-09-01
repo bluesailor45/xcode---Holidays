@@ -35,7 +35,7 @@ class PopUpViewController: UIViewController {
         NSKeyedArchiver.archiveRootObject(places, toFile: (fileNameString?.path)!)
         
         
-        print(fileNameString)
+  //      print(fileNameString)
         
         
         dismiss(animated: true)

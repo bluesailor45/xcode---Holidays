@@ -10,7 +10,7 @@ import UIKit
 
 class PopUpTableViewController: UITableViewController {
 
-   
+    var passedFileName: String = " "        // filename to be passed back to TableViewController
     
     @IBOutlet var popUpTable: UITableView!
 
@@ -21,15 +21,8 @@ class PopUpTableViewController: UITableViewController {
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-  //          print("fileURLs = " ,fileURLs)
-  //          print("nbr of URLs = ", fileURLs.count)
             
             fileNames = fileURLs
-            
-            
-            let fileNamesLastComp = fileURLs.first?.lastPathComponent
-   //         print("fileNamesLastPathComponent = ", fileNamesLastComp)
-            
             
         } catch {
             print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
@@ -76,30 +69,11 @@ class PopUpTableViewController: UITableViewController {
 
         let fileName = fileNames[indexPath.row]
         
-        if let filePlaces = (NSKeyedUnarchiver.unarchiveObject(withFile: (fileName.path) ) as? [Dictionary<String, String>]) {
-    //        places = filePlaces
-            
-            places.removeAll()  // empty old dictionary
-
-            
-            for i in filePlaces.indices {
-                print(filePlaces[i])
-                places.append(filePlaces[i])
-                print(places)
-            }
-            
-            print("filePlaces = ",filePlaces)
-            print("places unarchived")
-        }
-
-        
-        print("places = ",places)
-        print("fileName = ",fileName)
-       
+        passedFileName = fileName.path   // filename to be passed
+  
     
         performSegue(withIdentifier: "unwindToTable", sender: self)
 
-  //      dismiss(animated: true)
     }
 
     

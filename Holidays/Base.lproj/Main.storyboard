@@ -56,6 +56,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locations" id="4yq-Se-Ksj">
+                        <barButtonItem key="leftBarButtonItem" title="move Rows" id="H2a-cY-QOE">
+                            <connections>
+                                <action selector="editMode:" destination="x80-7e-Bha" id="g3S-a8-waA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Op-Qj-bbb">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="toMap" id="83c-8x-fUk"/>

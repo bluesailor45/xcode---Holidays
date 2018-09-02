@@ -29,8 +29,8 @@ class PopUpViewController: UIViewController {
         let url = urls.first
         let fileNameString = url?.appendingPathComponent(fileName.text!)
         
-        let fileNameLast = fileNameString!.lastPathComponent
-        print( "last Path Component = ", fileNameLast)
+ //      let fileNameLast = fileNameString!.lastPathComponent
+ //       print( "last Path Component = ", fileNameLast)
         
         NSKeyedArchiver.archiveRootObject(places, toFile: (fileNameString?.path)!)
         

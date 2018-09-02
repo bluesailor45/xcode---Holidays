@@ -16,29 +16,10 @@ var fileNames: [URL] = []               // used for saving different "projects"
 
 class TableViewController: UITableViewController {
 
-
-    /*
-    @IBAction func saveFile(_ sender: Any) {
-
-        let url = getFileName()
-        let fileName = url.appendingPathComponent("holiday.txt")
-       
-            NSKeyedArchiver.archiveRootObject(places, toFile: fileName.path)
-            print("places archived")
-        print(places)
-        print(fileName)
-        
+    @IBAction func editMode(_ sender: Any) {
+    self.isEditing = !self.isEditing            // switch editing mode
     }
- 
     
-    func getFileName() -> URL {
-        let fm = FileManager.default
-        let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
-        let url = urls.first
-        return url!
-        
-    }
-    */
     
     @IBOutlet var table: UITableView!
     
@@ -48,8 +29,6 @@ class TableViewController: UITableViewController {
     @IBAction func unwindToTable(segue: UIStoryboardSegue) {
         // refer to this segue in next views
         // code appended to support data passing
-        
-  //      print("segue source = ", segue.source)
         
         if segue.source is PopUpTableViewController {
      
@@ -121,12 +100,29 @@ class TableViewController: UITableViewController {
     }
     
 
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //  return the number of rows
         return places.count
     }
 
+    // functions to enable moving rows
+    
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = places[sourceIndexPath.row]
+        places.remove(at: sourceIndexPath.row)
+        places.insert(movedObject, at: destinationIndexPath.row)
+        
+        UserDefaults.standard.set(places, forKey: "places")     // save rearranged rows
+        
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      //   let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -151,19 +147,6 @@ class TableViewController: UITableViewController {
     }
     
 
-  /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            places.remove(at: indexPath.row)
-            
-            UserDefaults.standard.set(places, forKey: "places")
-            tableView.reloadData()
-      //      tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    */
      //    Test for changing the title
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "delete") { (tableAction, indexPath) in

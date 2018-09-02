@@ -97,7 +97,6 @@ class PopUpTableViewController: UITableViewController {
             if editingStyle == .delete {
             if fileNames.count > 1 {  // do NOT delete last file
                 let fm = FileManager.default
-
                 
                 do {
                     if fm.fileExists(atPath: fileNames[indexPath.row].path) {

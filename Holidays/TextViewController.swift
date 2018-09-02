@@ -27,7 +27,9 @@ class TextViewController: UIViewController, UITextViewDelegate {
     
     // func textView implemented to force keyboard to dismiss if return hit
     // also "commentField.delegate ... " included
-    
+   
+    /* deleted due to new function with IQKeyboardManager: "Done"
+     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             textView.resignFirstResponder()
@@ -35,6 +37,7 @@ class TextViewController: UIViewController, UITextViewDelegate {
         }
         return true
     }
+   */
     
     override func viewDidLoad() {
         super.viewDidLoad()

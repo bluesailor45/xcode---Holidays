@@ -21,9 +21,18 @@ class PopUpTableViewController: UITableViewController {
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+      
+            // if no files yet saved, save current locations as "defaultFile"
+            if fileURLs.count == 0 {
+
+                let fileNameString = documentsURL.appendingPathComponent("defaultFile")
+                NSKeyedArchiver.archiveRootObject(places, toFile: (fileNameString.path))
+        
+                fileNames = [fileNameString]
+            }
             
             fileNames = fileURLs
-            
+        
         } catch {
             print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
         }

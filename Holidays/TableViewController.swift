@@ -30,7 +30,7 @@ class TableViewController: UITableViewController {
         // refer to this segue in next views
         // code appended to support data passing
         
-        if segue.source is PopUpTableViewController {
+        if segue.source is PopUpTableViewController {       // send back file name
      
             if let senderVC = segue.source as? PopUpTableViewController {
                 let projectFile = senderVC.passedFileName
@@ -52,12 +52,32 @@ class TableViewController: UITableViewController {
             table.reloadData()
         }
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
+   
+        // test to see if there is at least one file
+ /*
+        let fileManager = FileManager.default
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        do {
+            let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+            
+            if fileURLs.count < 1 {
+                print("no load files")
+                
+            
+                self.navigationItem.rightBarButtonItem?.isEnabled = false
+            } else {
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+            }
+        } catch {
+            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+        }
+         
+ */
+ 
+         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -83,7 +103,11 @@ class TableViewController: UITableViewController {
    //     print(UserDefaults.standard.array(forKey: "places") as Any)
         
     //    print("places in TableViewController = ", places)
-        table.reloadData()
+        
+        
+        
+    
+    table.reloadData()
         
     }
 
@@ -163,7 +187,7 @@ class TableViewController: UITableViewController {
             self.performSegue(withIdentifier: "toComment", sender: nil)
         }
         comment.backgroundColor = UIColor.blue
-        return [delete, comment]
+        return [comment, delete]
     }
 
     func tableAction(_ action: [UITableViewRowAction]) {

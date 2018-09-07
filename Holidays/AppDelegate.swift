@@ -19,6 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 50
+    //    IQKeyboardManager.shared.overrideKeyboardAppearance = true
+    //    IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+
+        
+        
         
         return true
     }

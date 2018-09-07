@@ -30,9 +30,8 @@
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="vYM-dl-XRu"/>
-                                <barButtonItem title="Load file" id="0ey-2W-xQ9">
+                                <barButtonItem title="Load file" id="0ey-2W-xQ9" propertyAccessControl="all">
                                     <connections>
-                                        <action selector="loadFile:" destination="x80-7e-Bha" id="p9F-c3-cg8"/>
                                         <segue destination="JkE-vh-Ira" kind="popoverPresentation" identifier="loadFileSegue" popoverAnchorBarButtonItem="0ey-2W-xQ9" id="2fs-dt-p3u">
                                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                         </segue>
@@ -257,7 +256,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="add comments to this location ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q5J-BH-iER">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q5J-BH-iER">
                                 <rect key="frame" x="16" y="101" width="343" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

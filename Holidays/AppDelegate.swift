@@ -22,10 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.keyboardDistanceFromTextField = 50
     //    IQKeyboardManager.shared.overrideKeyboardAppearance = true
     //    IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
-
-        
-        
-        
+                
         return true
     }
 

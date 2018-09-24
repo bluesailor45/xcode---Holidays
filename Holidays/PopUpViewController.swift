@@ -5,6 +5,7 @@
 //  Created by Kurt Feusi on 29.08.18.
 //  Copyright © 2018 Kurt Feusi. All rights reserved.
 //
+// PopUp with a text entry to enter a "project file name" do be saved will be displayed when "save" is entered in mainView
 
 import UIKit
 
@@ -12,7 +13,9 @@ class PopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+        fileName.text = activeFile                      // display active fileName in save text cell
+        
         // Do any additional setup after loading the view.
     }
 
@@ -34,6 +37,9 @@ class PopUpViewController: UIViewController {
         
         NSKeyedArchiver.archiveRootObject(places, toFile: (fileNameString?.path)!)
         
+        if let active = fileName.text {
+            activeFile = active
+        }                                                   // added 20.9
         
   //      print(fileNameString)
         

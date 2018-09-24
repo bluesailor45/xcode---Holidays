@@ -5,6 +5,8 @@
 //  Created by Kurt Feusi on 29.08.18.
 //  Copyright © 2018 Kurt Feusi. All rights reserved.
 //
+//  Table with already saved projects will be displayed when "Load Project" has been hit
+//  load the project file selected in table
 
 import UIKit
 
@@ -80,6 +82,7 @@ class PopUpTableViewController: UITableViewController {
         
         passedFileName = fileName.path   // filename to be passed
   
+        activeFile = fileNames[indexPath.row].lastPathComponent                 // added 20.9
     
         performSegue(withIdentifier: "unwindToTable", sender: self)
 

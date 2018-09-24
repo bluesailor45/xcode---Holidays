@@ -5,6 +5,8 @@
 //  Created by Kurt Feusi on 14.05.18.
 //  Copyright © 2018 Kurt Feusi. All rights reserved.
 //
+// Map to be displayed when a entry is selected in MainView Table
+//
 
 import UIKit
 import MapKit

@@ -5,6 +5,8 @@
 //  Created by Kurt Feusi on 14.05.18.
 //  Copyright © 2018 Kurt Feusi. All rights reserved.
 //
+// This is the main View to display all locations already saved
+//
 
 import UIKit
 
@@ -13,11 +15,18 @@ var places = [Dictionary<String, String>()]
 var activePlace = -1
 
 var fileNames: [URL] = []               // used for saving different "projects"
+var activeFile = " "               // added 20.9
 
 class TableViewController: UITableViewController {
 
     @IBAction func editMode(_ sender: Any) {
-    self.isEditing = !self.isEditing            // switch editing mode
+        // change title of "Move Rows" button to "Done" when in editing mode
+        if self.isEditing == false {
+            self.navigationItem.leftBarButtonItem?.title = "Done"
+        } else {
+            self.navigationItem.leftBarButtonItem?.title = "Move Rows"
+        }
+        self.isEditing = !self.isEditing            // switch editing mode
     }
     
     
@@ -34,6 +43,9 @@ class TableViewController: UITableViewController {
      
             if let senderVC = segue.source as? PopUpTableViewController {
                 let projectFile = senderVC.passedFileName
+                
+         //       print("activeFile from Main ", activeFile)                                        // added 20.9 
+                
         //        print("project File = ", projectFile)
                 if let filePlaces = (NSKeyedUnarchiver.unarchiveObject(withFile: projectFile)) as? [Dictionary<String,String>] {
                     
@@ -49,6 +61,8 @@ class TableViewController: UITableViewController {
                 }
             }
             UserDefaults.standard.set(places, forKey: "places")     // save new values
+            
+            UserDefaults.standard.set(activeFile, forKey: "activeProject")
             table.reloadData()
         }
     }
@@ -56,27 +70,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        // test to see if there is at least one file
- /*
-        let fileManager = FileManager.default
-        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        do {
-            let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-            
-            if fileURLs.count < 1 {
-                print("no load files")
-                
-            
-                self.navigationItem.rightBarButtonItem?.isEnabled = false
-            } else {
-                self.navigationItem.rightBarButtonItem?.isEnabled = true
-            }
-        } catch {
-            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
-        }
-         
- */
- 
          // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -87,18 +80,31 @@ class TableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
     
         super.viewDidAppear(true)
-        navigationItem.title = "Locations"
+        
+        
+        
         activePlace = -1
         
          if let tempPlaces = UserDefaults.standard.object(forKey: "places") as? [Dictionary<String, String>] {
             places = tempPlaces
          }
-     
+        
+        if let tempProject = UserDefaults.standard.object(forKey: "activeProject") as? String {
+            activeFile = tempProject
+        }
+        
+        navigationItem.title = "Locations"
+        if activeFile != "" {
+            navigationItem.title = activeFile
+        }
+        
         if places.count == 1 && places[0].count == 0 {
             places.remove(at: 0)
             places.append(["name": "La Brigantine", "lat" :  "43.268336", "lon": "6.586143", "comment": "This is my place"])
             
             UserDefaults.standard.set(places, forKey: "places")
+            
+            UserDefaults.standard.set(activeFile, forKey: "activeProject")
         }
    //     print(UserDefaults.standard.array(forKey: "places") as Any)
         
@@ -146,6 +152,7 @@ class TableViewController: UITableViewController {
         
         UserDefaults.standard.set(places, forKey: "places")     // save rearranged rows
         
+        UserDefaults.standard.set(activeFile, forKey: "activeProject")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -171,29 +178,31 @@ class TableViewController: UITableViewController {
     }
     
 
-     //    Test for changing the title
+     //    change the titles of the edit actions
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "delete") { (tableAction, indexPath) in
             places.remove(at: indexPath.row)
             
             UserDefaults.standard.set(places, forKey: "places")
+            
+            UserDefaults.standard.set(activeFile, forKey: "activeProject")
+            
             tableView.reloadData()
         }
         let comment = UITableViewRowAction(style: .normal, title: "comment") { (tableAction, indexPath) in
 
             activePlace = indexPath.row
-            // self.goToComment(indexPath: indexPath)
 
             self.performSegue(withIdentifier: "toComment", sender: nil)
         }
         comment.backgroundColor = UIColor.blue
         return [comment, delete]
     }
-
+/*
     func tableAction(_ action: [UITableViewRowAction]) {
         print("action entered")
     }
-
+*/
     func goToComment(indexPath: IndexPath) {
         activePlace = indexPath.row
         performSegue(withIdentifier: "toComment", sender: nil)

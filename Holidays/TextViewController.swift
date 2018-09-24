@@ -5,6 +5,8 @@
 //  Created by Kurt Feusi on 13.06.18.
 //  Copyright © 2018 Kurt Feusi. All rights reserved.
 //
+// TextView to enter a comment to a location
+//
 
 import UIKit
 
@@ -21,6 +23,9 @@ class TextViewController: UIViewController, UITextViewDelegate {
             places[activePlace]["comment"] = commentField.text
             
             UserDefaults.standard.set(places, forKey: "places")
+            
+            UserDefaults.standard.set(activeFile, forKey: "activeProject")                // save active project filename
+            
             performSegue(withIdentifier: "unwindToTable", sender: nil)        }
     }
     

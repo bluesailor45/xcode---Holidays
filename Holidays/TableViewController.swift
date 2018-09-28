@@ -9,16 +9,19 @@
 //
 
 import UIKit
+import Reachability                     // used for tests for internet availability
 
 var places = [Dictionary<String, String>()]
 // var places = [["name": "La Brigantine", "lat": "43.268", "lon": "6.58", "comment": "my favorite"]]
 var activePlace = -1
 
 var fileNames: [URL] = []               // used for saving different "projects"
-var activeFile = " "               // added 20.9
+var activeFile = " "                    // added 20.9
 
 class TableViewController: UITableViewController {
 
+     let reachability = Reachability()!
+    
     @IBAction func editMode(_ sender: Any) {
         // change title of "Move Rows" button to "Done" when in editing mode
         if self.isEditing == false {
@@ -44,19 +47,13 @@ class TableViewController: UITableViewController {
             if let senderVC = segue.source as? PopUpTableViewController {
                 let projectFile = senderVC.passedFileName
                 
-         //       print("activeFile from Main ", activeFile)                                        // added 20.9 
-                
-        //        print("project File = ", projectFile)
                 if let filePlaces = (NSKeyedUnarchiver.unarchiveObject(withFile: projectFile)) as? [Dictionary<String,String>] {
-                    
-   //                 print("unarchived object = ", filePlaces)
                     
                     places.removeAll()
                     
                     for i in filePlaces.indices {
                         places.append(filePlaces[i])
                         
-    //                    print("places: = ", places)
                     }
                 }
             }
@@ -70,7 +67,14 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-         // Uncomment the following line to preserve selection between presentations
+        if ((reachability.connection) == .none) {           // test if internet reachable
+            // disable "+" button in right BarButtonItem
+
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        } else {
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+        // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -81,7 +85,13 @@ class TableViewController: UITableViewController {
     
         super.viewDidAppear(true)
         
-        
+        if ((reachability.connection) == .none) {           // test if internet reachable
+        // disable "+" button in right BarButtonItem
+
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        } else {
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
         
         activePlace = -1
         
@@ -106,10 +116,6 @@ class TableViewController: UITableViewController {
             
             UserDefaults.standard.set(activeFile, forKey: "activeProject")
         }
-   //     print(UserDefaults.standard.array(forKey: "places") as Any)
-        
-    //    print("places in TableViewController = ", places)
-        
         
         
     
@@ -158,7 +164,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      //   let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
         if places[indexPath.row]["name"] != nil {
             cell.textLabel?.text = places[indexPath.row]["name"]
         }
@@ -166,9 +172,27 @@ class TableViewController: UITableViewController {
     }
     
       override  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // test if internet is reachable
+        
+        if ((reachability.connection) == .none) {
+
+            let alertController = UIAlertController(title: nil, message: "No access to Internet", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+    /*
+            alertController.addTextField { (actionToTake) in
+                actionToTake.text = "activate network and restart app!"
+            }
+    */
+         self.present(alertController, animated: true, completion: nil)
+         
+        } else {
+        
         activePlace = indexPath.row
         performSegue(withIdentifier: "toMap", sender: self)
+        }
     }
+        
 
     
     // Override to support conditional editing of the table view.
@@ -198,11 +222,7 @@ class TableViewController: UITableViewController {
         comment.backgroundColor = UIColor.blue
         return [comment, delete]
     }
-/*
-    func tableAction(_ action: [UITableViewRowAction]) {
-        print("action entered")
-    }
-*/
+
     func goToComment(indexPath: IndexPath) {
         activePlace = indexPath.row
         performSegue(withIdentifier: "toComment", sender: nil)

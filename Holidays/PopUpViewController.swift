@@ -32,17 +32,11 @@ class PopUpViewController: UIViewController {
         let url = urls.first
         let fileNameString = url?.appendingPathComponent(fileName.text!)
         
- //      let fileNameLast = fileNameString!.lastPathComponent
- //       print( "last Path Component = ", fileNameLast)
-        
         NSKeyedArchiver.archiveRootObject(places, toFile: (fileNameString?.path)!)
         
         if let active = fileName.text {
             activeFile = active
         }                                                   // added 20.9
-        
-  //      print(fileNameString)
-        
         
         dismiss(animated: true)
         

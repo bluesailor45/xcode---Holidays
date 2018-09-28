@@ -16,9 +16,9 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
 
     var searchController:UISearchController!
     var annotation:MKAnnotation!
-    var localSearchRequest:MKLocalSearchRequest!
+    var localSearchRequest:MKLocalSearch.Request!
     var localSearch:MKLocalSearch!
-    var localSearchResponse:MKLocalSearchResponse!
+    var localSearchResponse:MKLocalSearch.Response!
     var error:NSError!
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
@@ -105,14 +105,14 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
             self.mapView.removeAnnotation(annotation)
         }
         //2
-        localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest = MKLocalSearch.Request()
         localSearchRequest.naturalLanguageQuery = searchBar.text
         localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.start { (localSearchResponse, error) -> Void in
             
             if localSearchResponse == nil{
-                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertController.Style.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
                 return
             }
@@ -160,8 +160,6 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
                     if placemark.locality != nil {
                         locality = placemark.locality!
                     }
-
-        //            print(thoroughfare + " " + subThoroughfare + "\n" + locality + "\n")
                     
                     self.pointAnnotation = MKPointAnnotation()
                     
@@ -181,7 +179,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
     
 
     @objc func longpress(gestureRecognizer: UIGestureRecognizer) {
-    if gestureRecognizer.state == UIGestureRecognizerState.began {
+    if gestureRecognizer.state == UIGestureRecognizer.State.began {
         // avoid multiple entries into function
         let touchPoint = gestureRecognizer.location(in: self.mapView)
         let coordinate = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
@@ -193,6 +191,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
    
         let pointAnnotation = MKPointAnnotation()       // ohne diese let => found nil in nachster Zeile ?!
         pointAnnotation.coordinate = coordinate
+        
         
         // newly entered to add adress to annotation
         
@@ -221,8 +220,6 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
                     if placemark.locality != nil {
                         locality = placemark.locality!
                     }
-                    
-                    //            print(thoroughfare + " " + subThoroughfare + "\n" + locality + "\n")
                     
                     self.pointAnnotation = MKPointAnnotation()
                     

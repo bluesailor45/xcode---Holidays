@@ -7,24 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2129834D2E347F6C580447B9 /* Pods_HolidaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B5420CB1B4200C4FC3A2D /* Pods_HolidaysUITests.framework */; };
 		5C38AA2920A9E980003A6BFA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38AA2820A9E980003A6BFA /* TableViewController.swift */; };
-		5C73C6AC213C5BB300EAA169 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C696213C5BB300EAA169 /* IQTextView.swift */; };
-		5C73C6AD213C5BB300EAA169 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C698213C5BB300EAA169 /* IQPreviousNextView.swift */; };
-		5C73C6AE213C5BB300EAA169 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C699213C5BB300EAA169 /* IQTitleBarButtonItem.swift */; };
-		5C73C6AF213C5BB300EAA169 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C69A213C5BB300EAA169 /* IQBarButtonItem.swift */; };
-		5C73C6B0213C5BB300EAA169 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C69B213C5BB300EAA169 /* IQToolbar.swift */; };
-		5C73C6B1213C5BB300EAA169 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C69C213C5BB300EAA169 /* IQUIView+IQKeyboardToolbar.swift */; };
-		5C73C6B2213C5BB300EAA169 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C69D213C5BB300EAA169 /* IQInvocation.swift */; };
-		5C73C6B3213C5BB300EAA169 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C69F213C5BB300EAA169 /* IQKeyboardManagerConstantsInternal.swift */; };
-		5C73C6B4213C5BB300EAA169 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6A0213C5BB300EAA169 /* IQKeyboardManagerConstants.swift */; };
-		5C73C6B5213C5BB300EAA169 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C73C6A2213C5BB300EAA169 /* IQKeyboardManager.bundle */; };
-		5C73C6B6213C5BB300EAA169 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6A3213C5BB300EAA169 /* IQKeyboardReturnKeyHandler.swift */; };
-		5C73C6B7213C5BB300EAA169 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6A4213C5BB300EAA169 /* IQKeyboardManager.swift */; };
-		5C73C6B8213C5BB300EAA169 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6A7213C5BB300EAA169 /* IQUIScrollView+Additions.swift */; };
-		5C73C6B9213C5BB300EAA169 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6A8213C5BB300EAA169 /* IQUIViewController+Additions.swift */; };
-		5C73C6BA213C5BB300EAA169 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6A9213C5BB300EAA169 /* IQUITextFieldView+Additions.swift */; };
-		5C73C6BB213C5BB300EAA169 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6AA213C5BB300EAA169 /* IQUIView+Hierarchy.swift */; };
-		5C73C6BC213C5BB300EAA169 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73C6AB213C5BB300EAA169 /* IQNSArray+Sort.swift */; };
 		5CCA9D7521039AA400556816 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCA9D7421039AA400556816 /* Images.xcassets */; };
 		5CEC555F20A9CEE200C37476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEC555E20A9CEE200C37476 /* AppDelegate.swift */; };
 		5CEC556120A9CEE200C37476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEC556020A9CEE200C37476 /* ViewController.swift */; };
@@ -38,6 +22,8 @@
 		5CF2FD7C21371FC000E9ADCC /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2FD7B21371FC000E9ADCC /* PopUpTableViewController.swift */; };
 		5CF2FD7E21372A5B00E9ADCC /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2FD7D21372A5B00E9ADCC /* PopUpViewController.swift */; };
 		5CF9BAC020D1104D005A8C25 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF9BABF20D1104D005A8C25 /* TextViewController.swift */; };
+		B60DF5DBF2E99A3F78BDB552 /* Pods_Holidays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE60096EF4739B38D4EA605 /* Pods_Holidays.framework */; };
+		DB928E419C2DF632AF107931 /* Pods_HolidaysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D565AC0A66F01CB33774E76B /* Pods_HolidaysTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,25 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130A9E5B2261E0EBEF5ACC50 /* Pods-HolidaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidaysUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HolidaysUITests/Pods-HolidaysUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1CE60096EF4739B38D4EA605 /* Pods_Holidays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holidays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C38AA2820A9E980003A6BFA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		5C73C696213C5BB300EAA169 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
-		5C73C698213C5BB300EAA169 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
-		5C73C699213C5BB300EAA169 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		5C73C69A213C5BB300EAA169 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
-		5C73C69B213C5BB300EAA169 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
-		5C73C69C213C5BB300EAA169 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		5C73C69D213C5BB300EAA169 /* IQInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQInvocation.swift; sourceTree = "<group>"; };
-		5C73C69F213C5BB300EAA169 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		5C73C6A0213C5BB300EAA169 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		5C73C6A2213C5BB300EAA169 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
-		5C73C6A3213C5BB300EAA169 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
-		5C73C6A4213C5BB300EAA169 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
-		5C73C6A5213C5BB300EAA169 /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
-		5C73C6A7213C5BB300EAA169 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
-		5C73C6A8213C5BB300EAA169 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
-		5C73C6A9213C5BB300EAA169 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
-		5C73C6AA213C5BB300EAA169 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		5C73C6AB213C5BB300EAA169 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		5CCA9D7421039AA400556816 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CEC555B20A9CEE200C37476 /* Holidays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holidays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEC555E20A9CEE200C37476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +66,13 @@
 		5CF2FD7B21371FC000E9ADCC /* PopUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
 		5CF2FD7D21372A5B00E9ADCC /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		5CF9BABF20D1104D005A8C25 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		78C64B09A1BF4667502C2336 /* Pods-Holidays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holidays.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Holidays/Pods-Holidays.debug.xcconfig"; sourceTree = "<group>"; };
+		7C63DA4CD0AE2A1E64F6ABD0 /* Pods-HolidaysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidaysUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HolidaysUITests/Pods-HolidaysUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		99A4B001797FD044ED51E2B1 /* Pods-HolidaysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidaysTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HolidaysTests/Pods-HolidaysTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6ED95C048FD5E4579CC9513 /* Pods-HolidaysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidaysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HolidaysTests/Pods-HolidaysTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D31B5420CB1B4200C4FC3A2D /* Pods_HolidaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HolidaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D565AC0A66F01CB33774E76B /* Pods_HolidaysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HolidaysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66ADF6E80950737FF2DEA86 /* Pods-Holidays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holidays.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holidays/Pods-Holidays.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CEC559120A9CF5200C37476 /* CoreLocation.framework in Frameworks */,
+				B60DF5DBF2E99A3F78BDB552 /* Pods_Holidays.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB928E419C2DF632AF107931 /* Pods_HolidaysTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,77 +97,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2129834D2E347F6C580447B9 /* Pods_HolidaysUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C73C694213C5BB300EAA169 /* IQKeyboardManagerSwift */ = {
-			isa = PBXGroup;
-			children = (
-				5C73C695213C5BB300EAA169 /* IQTextView */,
-				5C73C697213C5BB300EAA169 /* IQToolbar */,
-				5C73C69E213C5BB300EAA169 /* Constants */,
-				5C73C6A1213C5BB300EAA169 /* Resources */,
-				5C73C6A3213C5BB300EAA169 /* IQKeyboardReturnKeyHandler.swift */,
-				5C73C6A4213C5BB300EAA169 /* IQKeyboardManager.swift */,
-				5C73C6A5213C5BB300EAA169 /* IQKeyboardManagerSwift.h */,
-				5C73C6A6213C5BB300EAA169 /* Categories */,
-			);
-			path = IQKeyboardManagerSwift;
-			sourceTree = "<group>";
-		};
-		5C73C695213C5BB300EAA169 /* IQTextView */ = {
-			isa = PBXGroup;
-			children = (
-				5C73C696213C5BB300EAA169 /* IQTextView.swift */,
-			);
-			path = IQTextView;
-			sourceTree = "<group>";
-		};
-		5C73C697213C5BB300EAA169 /* IQToolbar */ = {
-			isa = PBXGroup;
-			children = (
-				5C73C698213C5BB300EAA169 /* IQPreviousNextView.swift */,
-				5C73C699213C5BB300EAA169 /* IQTitleBarButtonItem.swift */,
-				5C73C69A213C5BB300EAA169 /* IQBarButtonItem.swift */,
-				5C73C69B213C5BB300EAA169 /* IQToolbar.swift */,
-				5C73C69C213C5BB300EAA169 /* IQUIView+IQKeyboardToolbar.swift */,
-				5C73C69D213C5BB300EAA169 /* IQInvocation.swift */,
-			);
-			path = IQToolbar;
-			sourceTree = "<group>";
-		};
-		5C73C69E213C5BB300EAA169 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				5C73C69F213C5BB300EAA169 /* IQKeyboardManagerConstantsInternal.swift */,
-				5C73C6A0213C5BB300EAA169 /* IQKeyboardManagerConstants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		5C73C6A1213C5BB300EAA169 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5C73C6A2213C5BB300EAA169 /* IQKeyboardManager.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		5C73C6A6213C5BB300EAA169 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				5C73C6A7213C5BB300EAA169 /* IQUIScrollView+Additions.swift */,
-				5C73C6A8213C5BB300EAA169 /* IQUIViewController+Additions.swift */,
-				5C73C6A9213C5BB300EAA169 /* IQUITextFieldView+Additions.swift */,
-				5C73C6AA213C5BB300EAA169 /* IQUIView+Hierarchy.swift */,
-				5C73C6AB213C5BB300EAA169 /* IQNSArray+Sort.swift */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		5CEC555220A9CEE200C37476 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +112,7 @@
 				5CEC558020A9CEE300C37476 /* HolidaysUITests */,
 				5CEC555C20A9CEE200C37476 /* Products */,
 				5CEC558F20A9CF5200C37476 /* Frameworks */,
+				7C8632B78BBB90801B9BFC49 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,7 +129,6 @@
 		5CEC555D20A9CEE200C37476 /* Holidays */ = {
 			isa = PBXGroup;
 			children = (
-				5C73C694213C5BB300EAA169 /* IQKeyboardManagerSwift */,
 				5CEC555E20A9CEE200C37476 /* AppDelegate.swift */,
 				5CF9BABF20D1104D005A8C25 /* TextViewController.swift */,
 				5CEC556020A9CEE200C37476 /* ViewController.swift */,
@@ -252,8 +167,24 @@
 			isa = PBXGroup;
 			children = (
 				5CEC559020A9CF5200C37476 /* CoreLocation.framework */,
+				1CE60096EF4739B38D4EA605 /* Pods_Holidays.framework */,
+				D565AC0A66F01CB33774E76B /* Pods_HolidaysTests.framework */,
+				D31B5420CB1B4200C4FC3A2D /* Pods_HolidaysUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C8632B78BBB90801B9BFC49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78C64B09A1BF4667502C2336 /* Pods-Holidays.debug.xcconfig */,
+				E66ADF6E80950737FF2DEA86 /* Pods-Holidays.release.xcconfig */,
+				C6ED95C048FD5E4579CC9513 /* Pods-HolidaysTests.debug.xcconfig */,
+				99A4B001797FD044ED51E2B1 /* Pods-HolidaysTests.release.xcconfig */,
+				7C63DA4CD0AE2A1E64F6ABD0 /* Pods-HolidaysUITests.debug.xcconfig */,
+				130A9E5B2261E0EBEF5ACC50 /* Pods-HolidaysUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CEC558620A9CEE300C37476 /* Build configuration list for PBXNativeTarget "Holidays" */;
 			buildPhases = (
+				98A559E27E3A97D6BB3DEF40 /* [CP] Check Pods Manifest.lock */,
 				5CEC555720A9CEE200C37476 /* Sources */,
 				5CEC555820A9CEE200C37476 /* Frameworks */,
 				5CEC555920A9CEE200C37476 /* Resources */,
+				80D9BCCEE63EE19675710766 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CEC558920A9CEE300C37476 /* Build configuration list for PBXNativeTarget "HolidaysTests" */;
 			buildPhases = (
+				FA35D3F6B814E34C0D024EEB /* [CP] Check Pods Manifest.lock */,
 				5CEC556E20A9CEE300C37476 /* Sources */,
 				5CEC556F20A9CEE300C37476 /* Frameworks */,
 				5CEC557020A9CEE300C37476 /* Resources */,
@@ -298,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CEC558C20A9CEE300C37476 /* Build configuration list for PBXNativeTarget "HolidaysUITests" */;
 			buildPhases = (
+				22C098009EC7E769A8D66E91 /* [CP] Check Pods Manifest.lock */,
 				5CEC557920A9CEE300C37476 /* Sources */,
 				5CEC557A20A9CEE300C37476 /* Frameworks */,
 				5CEC557B20A9CEE300C37476 /* Resources */,
@@ -324,13 +259,16 @@
 				TargetAttributes = {
 					5CEC555A20A9CEE200C37476 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 					5CEC557120A9CEE300C37476 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 5CEC555A20A9CEE200C37476;
 					};
 					5CEC557C20A9CEE300C37476 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 5CEC555A20A9CEE200C37476;
 					};
 				};
@@ -360,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C73C6B5213C5BB300EAA169 /* IQKeyboardManager.bundle in Resources */,
 				5CEC556C20A9CEE300C37476 /* LaunchScreen.storyboard in Resources */,
 				5CCA9D7521039AA400556816 /* Images.xcassets in Resources */,
 				5CEC556920A9CEE300C37476 /* Assets.xcassets in Resources */,
@@ -384,34 +321,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22C098009EC7E769A8D66E91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HolidaysUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80D9BCCEE63EE19675710766 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Holidays/Pods-Holidays-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holidays/Pods-Holidays-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A559E27E3A97D6BB3DEF40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Holidays-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA35D3F6B814E34C0D024EEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HolidaysTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5CEC555720A9CEE200C37476 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C73C6BB213C5BB300EAA169 /* IQUIView+Hierarchy.swift in Sources */,
 				5CF9BAC020D1104D005A8C25 /* TextViewController.swift in Sources */,
-				5C73C6BC213C5BB300EAA169 /* IQNSArray+Sort.swift in Sources */,
 				5CEC556120A9CEE200C37476 /* ViewController.swift in Sources */,
-				5C73C6B9213C5BB300EAA169 /* IQUIViewController+Additions.swift in Sources */,
-				5C73C6AF213C5BB300EAA169 /* IQBarButtonItem.swift in Sources */,
 				5CF2FD7E21372A5B00E9ADCC /* PopUpViewController.swift in Sources */,
-				5C73C6BA213C5BB300EAA169 /* IQUITextFieldView+Additions.swift in Sources */,
 				5CEC556720A9CEE200C37476 /* Holidays.xcdatamodeld in Sources */,
-				5C73C6B3213C5BB300EAA169 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				5C73C6B7213C5BB300EAA169 /* IQKeyboardManager.swift in Sources */,
-				5C73C6B6213C5BB300EAA169 /* IQKeyboardReturnKeyHandler.swift in Sources */,
-				5C73C6B1213C5BB300EAA169 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				5CEC555F20A9CEE200C37476 /* AppDelegate.swift in Sources */,
-				5C73C6AD213C5BB300EAA169 /* IQPreviousNextView.swift in Sources */,
-				5C73C6AC213C5BB300EAA169 /* IQTextView.swift in Sources */,
-				5C73C6B2213C5BB300EAA169 /* IQInvocation.swift in Sources */,
 				5CF2FD7C21371FC000E9ADCC /* PopUpTableViewController.swift in Sources */,
-				5C73C6B4213C5BB300EAA169 /* IQKeyboardManagerConstants.swift in Sources */,
 				5C38AA2920A9E980003A6BFA /* TableViewController.swift in Sources */,
-				5C73C6B8213C5BB300EAA169 /* IQUIScrollView+Additions.swift in Sources */,
-				5C73C6AE213C5BB300EAA169 /* IQTitleBarButtonItem.swift in Sources */,
-				5C73C6B0213C5BB300EAA169 /* IQToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +596,7 @@
 		};
 		5CEC558720A9CEE300C37476 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C64B09A1BF4667502C2336 /* Pods-Holidays.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -594,13 +609,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurtfeusi.Holidays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5CEC558820A9CEE300C37476 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66ADF6E80950737FF2DEA86 /* Pods-Holidays.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -613,13 +629,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurtfeusi.Holidays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		5CEC558A20A9CEE300C37476 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6ED95C048FD5E4579CC9513 /* Pods-HolidaysTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -633,7 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurtfeusi.HolidaysTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holidays.app/Holidays";
 			};
@@ -641,6 +658,7 @@
 		};
 		5CEC558B20A9CEE300C37476 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99A4B001797FD044ED51E2B1 /* Pods-HolidaysTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -654,7 +672,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurtfeusi.HolidaysTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holidays.app/Holidays";
 			};
@@ -662,6 +680,7 @@
 		};
 		5CEC558D20A9CEE300C37476 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C63DA4CD0AE2A1E64F6ABD0 /* Pods-HolidaysUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,7 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurtfeusi.HolidaysUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Holidays;
 			};
@@ -682,6 +701,7 @@
 		};
 		5CEC558E20A9CEE300C37476 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 130A9E5B2261E0EBEF5ACC50 /* Pods-HolidaysUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -694,7 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurtfeusi.HolidaysUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Holidays;
 			};

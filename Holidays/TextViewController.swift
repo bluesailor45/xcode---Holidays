@@ -53,7 +53,6 @@ class TextViewController: UIViewController, UITextViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         if activePlace != -1 {
             locLabel.text = places[activePlace]["name"]
-     //       print(places[activePlace])
 
             if let comment = places[activePlace]["comment"] {
                commentField.text = comment
@@ -65,17 +64,6 @@ class TextViewController: UIViewController, UITextViewDelegate {
         
     }
   
-  /*        // funktioniert offenbar nur mit UITextField
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
